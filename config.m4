@@ -14,4 +14,6 @@ if test "$PHP_CHUNKUTILS2" != "no"; then
   PHP_ADD_BUILD_DIR($ext_builddir/lib, 1)
   PHP_ADD_INCLUDE($ext_builddir)
   PHP_ADD_INCLUDE($ext_builddir/gsl/include)
+  PHP_ADD_INCLUDE($ext_builddir/rust/target/release)
+  PHP_ADD_LIBRARY_WITH_PATH(chunkutils2, $ext_builddir/rust/target/release, CHUNKUTILS2_SHARED_LIBADD)
 fi

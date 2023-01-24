@@ -39,7 +39,6 @@ ZEND_TSRMLS_CACHE_EXTERN()
 
 #endif	/* PHP_CHUNKUTILS2_H */
 
-
 /*
  * Local variables:
  * tab-width: 4

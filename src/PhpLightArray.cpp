@@ -11,6 +11,7 @@ extern "C" {
 #include "ext/standard/php_var.h"
 #include "Zend/zend_exceptions.h"
 }
+#include <chunkutils2rs.h>
 
 zend_class_entry* light_array_entry;
 static zend_object_handlers light_array_handlers;
@@ -172,6 +173,8 @@ void register_light_array_class() {
 	light_array_handlers.offset = XtOffsetOf(light_array_obj, std);
 	light_array_handlers.free_obj = light_array_free;
 	light_array_handlers.clone_obj = light_array_clone;
+
+	ext_chunkutils2_add(2, 3);
 
 	zend_class_entry ce;
 	INIT_CLASS_ENTRY(ce, "pocketmine\\world\\format\\LightArray", class_pocketmine_world_format_LightArray_methods);
